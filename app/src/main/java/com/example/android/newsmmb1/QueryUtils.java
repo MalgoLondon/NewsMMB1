@@ -2,9 +2,11 @@ package com.example.android.newsmmb1;
 
 import android.text.TextUtils;
 import android.util.Log;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -168,7 +170,7 @@ final class QueryUtils {
                 JSONArray tags = currentNews.getJSONArray("tags");
 
                 //If "tags" array is not null
-                String authorFullName = "";
+                String authorLongName = "";
                 if (!tags.isNull(0)) {
                     JSONObject currentTag = tags.getJSONObject(0);
 
@@ -179,11 +181,11 @@ final class QueryUtils {
                     String authorLastName = !currentTag.isNull("lastName") ? currentTag.getString("lastName") : "";
 
                     //Author full name
-                    authorFullName = authorFirstName + " "+ authorLastName;
+                    authorLongName = authorFirstName + " " + authorLastName;
                     if (authorFirstName.trim() != "" || authorLastName.trim() != "") {
-                        authorFullName = ("By: ").concat(authorFullName);
+                        authorLongName = ("By: ").concat(authorLongName);
                     } else {
-                        authorFullName = "";
+                        authorLongName = "";
                     }
                 }
 
@@ -207,7 +209,7 @@ final class QueryUtils {
 
                 // Create a new {@link News} object with the title, section name, publication date,
                 // and url from the JSON response.
-                NewsObject news = new NewsObject(title, category, authorFullName, publicationDate, url);
+                NewsObject news = new NewsObject(title, category, authorLongName, publicationDate, url);
 
                 // Add the new {@link News} to the list of news.
                 newsList.add(news);

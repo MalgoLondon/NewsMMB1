@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -45,21 +46,21 @@ class NewsAdapter extends ArrayAdapter<NewsObject> {
         titleView.setText(currentNews.getTitle());
 
         // Find the TextView with view ID category_view
-        TextView sectionNameView = listItemView.findViewById(R.id.category_view);
+        TextView sectionView = listItemView.findViewById(R.id.category_view);
         // Display the section name of the current news in that TextView
-        sectionNameView.setText(currentNews.getNewsCategory());
+        sectionView.setText(currentNews.getNewsCategory());
 
         // Find the TextView with view ID author_view
-        TextView authorNameView = listItemView.findViewById(R.id.author_view);
+        TextView authorView = listItemView.findViewById(R.id.author_view);
         // Display the author name of the current news in that TextView
         if (currentNews.getNewsAuthor() != "") {
-            authorNameView.setText(currentNews.getNewsAuthor());
+            authorView.setText(currentNews.getNewsAuthor());
 
             //Set author name view as visible
-            authorNameView.setVisibility(View.VISIBLE);
+            authorView.setVisibility(View.VISIBLE);
         } else {
             //Set author name view as gone
-            authorNameView.setVisibility(View.GONE);
+            authorView.setVisibility(View.GONE);
         }
 
         // Find the TextView with view ID date_view

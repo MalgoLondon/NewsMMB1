@@ -37,14 +37,14 @@ public class NewsObject {
      *
      * @param title           is the title of the news
      * @param section         is the section where the news happened
-     * @param authorFullName  is the news author full name
+     * @param authorLongName  is the news author full name
      * @param publicationDate is the news publication date
      * @param url             is the website URL to find more details about the news
      */
-    public NewsObject(String title, String section, String authorFullName, Date publicationDate, String url) {
+    public NewsObject(String title, String section, String authorLongName, Date publicationDate, String url) {
         newsTitle = title;
         newsCategory = section;
-        newsAuthor = authorFullName;
+        newsAuthor = authorLongName;
         newsDate = publicationDate;
         newsUrl = url;
     }
