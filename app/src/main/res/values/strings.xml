@@ -2,6 +2,41 @@
 
 <resources>
     <string name="app_name">Your favourite News App</string>
-    <string name="no_internet_connection">no internet connection available, please check</string>
-    <string name="no_news">Sorry, no news</string>
+    <string name="no_internet_connection">No internet connection available, please check</string>
+    <string name="no_news">Sorry, no news at the moment. Please try to reload the app later.</string>
+
+    <!-- Settings Menu Item [CHAR LIMIT=NONE] -->
+    <string name="settings_menu_item">Settings</string>
+    <!-- Settings Activity Title [CHAR LIMIT=NONE] -->
+    <string name="settings_title">News Settings</string>
+
+    <!-- Strings For Order-By Preference [CHAR LIMIT=30] -->
+    <string name="settings_category_label">News Category</string>
+    <string name="settings_category_key" translatable="false">section</string>
+    <string name="settings_category_default" translatable="false">@string/settings_business_value</string>
+
+    <!-- Label for Politics [CHAR LIMIT=20] -->
+    <string name="settings_politics_label">Politics</string>
+    <string name="settings_politics_value" translatable="false">politics</string>
+
+    <!-- Label for Business [CHAR LIMIT=20] -->
+    <string name="settings_business_label">Business</string>
+    <string name="settings_business_value" translatable="false">business</string>
+
+    <!-- Label for Environment [CHAR LIMIT=20] -->
+    <string name="settings_environment_label">Environment</string>
+    <string name="settings_environment_value" translatable="false">environment</string>
+
+    <!-- Label for Money [CHAR LIMIT=20] -->
+    <string name="settings_money_label">Money</string>
+    <string name="settings_money_value" translatable="false">money</string>
+
+    <!-- Label for Tech [CHAR LIMIT=20] -->
+    <string name="settings_tech_label">Tech</string>
+    <string name="settings_tech_value" translatable="false">tech</string>
+
+    <!-- Label for Science [CHAR LIMIT=20] -->
+    <string name="settings_science_label">Science</string>
+    <string name="settings_science_value" translatable="false">science</string>
+
 </resources>
